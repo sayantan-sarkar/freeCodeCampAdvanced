@@ -1,0 +1,28 @@
+{
+  "name": "Sayantan Sarkar",
+  "description": "freeCodeCamp Advanced",
+  "main": "index.html",
+  "keywords": [
+    "freeCodeCamp",
+    "jquery",
+    "css",
+    "html",
+    "javascript"
+  ],
+  "authors": [
+    "Sayantan Sarkar"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
