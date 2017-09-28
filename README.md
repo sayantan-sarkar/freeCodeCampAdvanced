@@ -1,9 +1,13 @@
 This is a repository to try out the advanced front-end development tutorial projects on freeCodeCamp.
 
 The projects are namely:
+
 -Build  a JavaScript Calculator
+
 -Build a Pomodoro Clock
+
 -Build a Tic Tac Toe Game
+
 -Build a Simon Game
 
 You can find more details about freeCodeCamp at https://www.freecodecamp.org/
