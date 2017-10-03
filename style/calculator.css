@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Orbitron', sans-serif;
+} 
+
+body{
+  font-family: 'Orbitron', sans-serif;
+  background-color: #d1d1d1;
+}
+
+.calculator{
+  margin-top: 100px;
+  height:600px;
+  width:400px;
+  background-color: black;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 40px;
+  box-shadow: 10px 10px 5px #888888;
+  overflow: auto;
+}
+
+.w3-circle{
+  width:80px;
+  height:80px;
+  font-size: 35px;
+  margin:5px;
+  color: white;
+  background-color: #545454;
+  border-width: 0px;
+}
+
+.zeroNum{
+  font-size: 35px;
+  color: white;
+  width:170px;
+  height:80px;
+  background-color: #545454;
+  border-radius: 40px;
+  border-width: 0px;
+  margin:5px;
+}
+
+.tbtn{
+  background-color: #ABABAB;
+  color: black;
+}
+
+.opr{
+  background-color: #F7A01A;
+}
+
+#outBox{
+  height: 100px;
+  margin:5px;
+  margin-top: 10px;
+  width: 90%;
+  color: white;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+#result{
+  font-size: 50px;
+  height: 65px;
+}
+
+#history{
+  font-size: 25px;
+  height: 30px;
+  color: #d1d1d1;
+  float: right;
+}
+
+
+
+
