@@ -58,6 +58,7 @@ body{
   color: white;
   border-radius: 5px;
   overflow: auto;
+  white-space: nowrap;
 }
 
 #result{
@@ -69,7 +70,6 @@ body{
   font-size: 25px;
   height: 30px;
   color: #d1d1d1;
-  float: right;
 }
 
 
