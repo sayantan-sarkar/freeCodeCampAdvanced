@@ -11,11 +11,28 @@ body{
 
 
 #firstRow{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
-.sym{
+.outerCircle { 
+  margin-top: 50px;
+  width: 400px; 
+  height: 400px; 
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%; 
+  border: 5px solid red;
+} 
 
-}
+.innerCircle { 
+  position: absolute;
+  margin: 5px;
+  width: 380px; 
+  height: 380px; 
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%; 
+  background: green;
+} 
 
 
