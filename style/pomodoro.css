@@ -32,7 +32,18 @@ body{
   -moz-border-radius: 50%; 
   -webkit-border-radius: 50%; 
   border-radius: 50%; 
-  background: green;
+  background: red;
 } 
 
+#status{
+  position: relative;
+  text-align: center;
+  line-height: 200px;
+  font-size: 50px;
+}
 
+#timeLeft{
+  position: relative;
+  text-align: center;
+  font-size: 70px;
+}
