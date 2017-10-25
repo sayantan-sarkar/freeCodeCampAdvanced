@@ -2,9 +2,9 @@ This is a repository to try out the advanced front-end development tutorial proj
 
 The projects are namely:
 
--Build  a JavaScript Calculator
+-Build  a JavaScript Calculator :  COMPLETE
 
--Build a Pomodoro Clock
+-Build a Pomodoro Clock : COMPLETE
 
 -Build a Tic Tac Toe Game
 
