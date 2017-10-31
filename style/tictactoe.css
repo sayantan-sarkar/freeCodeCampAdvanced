@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'AmaticSC-Regular';
+  src: url('/fonts/amaticsc-regular-webfont.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url('/fonts/AmaticSC-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
+
+body{
+  font-family: AmaticSC-Regular, Georgia,Times New Roman,serif;
+  background-color: #d1d1d1;
+}
+
+.board{
+  margin-top: 100px;
+  height:400px;
+  width:400px;
+  background-image: url("/images/woodPattern.jpg");
+  background-size: cover;
+  font-family: AmaticSC-Regular, Georgia,Times New Roman,serif;
+  border-radius: 40px;
+  box-shadow: 10px 10px 5px #888888;
+  overflow: auto;
+}
+
+.slate{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 25px;
+  margin-left: 25px;
+  height:320px;
+  width:350px;
+  background-image: url("/images/chalkBoard.jpg");
+  background-size: cover;
+  font-family: AmaticSC-Regular, Georgia,Times New Roman,serif;
+  overflow: auto;
+}
