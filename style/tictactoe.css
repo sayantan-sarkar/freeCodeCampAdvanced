@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'AmaticSC-Regular';
-  src: url('/fonts/amaticsc-regular-webfont.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  url('/fonts/AmaticSC-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  font-family: 'EraserRegular';
+  src:url('/fonts/EraserRegular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 } 
 
 body{
-  font-family: AmaticSC-Regular, Georgia,Times New Roman,serif;
+  font-family: EraserRegular, Georgia,Times New Roman,serif;
   background-color: #d1d1d1;
+  color: white;
 }
 
 .board{
@@ -15,14 +15,14 @@ body{
   width:400px;
   background-image: url("/images/woodPattern.jpg");
   background-size: cover;
-  font-family: AmaticSC-Regular, Georgia,Times New Roman,serif;
+  font-family: EraserRegular, Georgia,Times New Roman,serif;
   border-radius: 40px;
   box-shadow: 10px 10px 5px #888888;
   overflow: auto;
 }
 
 .slate{
-  margin-top: 40px;
+  margin-top: 0px;
   margin-bottom: 40px;
   margin-right: 25px;
   margin-left: 25px;
@@ -32,4 +32,29 @@ body{
   background-size: cover;
   font-family: AmaticSC-Regular, Georgia,Times New Roman,serif;
   overflow: auto;
+}
+
+#scoreBoard{
+  margin: 5px;
+  height:35px;
+  width: 350px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#gridRow1, #gridRow2, #gridRow3{
+  font-family: EraserRegular, Georgia,Times New Roman,serif;
+  margin: 3px;
+  height: 100px;
+  font-size: 70px;
+  font-weight: bold;
+  border-bottom: 7px solid;
+}
+
+#gridRow3{
+  border-bottom: 0px;
+}
+
+#c00,#c01,#c10,#c11,#c20,#c21{
+  border-right: 7px solid;
 }
