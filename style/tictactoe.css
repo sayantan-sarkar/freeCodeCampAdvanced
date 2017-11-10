@@ -10,7 +10,7 @@ body{
 }
 
 .board{
-  margin-top: 100px;
+  margin-top: 0px;
   height:400px;
   width:400px;
   background-image: url("/images/woodPattern.jpg");
@@ -32,6 +32,14 @@ body{
   background-size: cover;
   font-family: AmaticSC-Regular, Georgia,Times New Roman,serif;
   overflow: auto;
+}
+
+.guide{
+  margin-top: 80px;
+  height:30px;
+  width:200px;
+  font-family: EraserRegular, Georgia,Times New Roman,serif;
+  background-color: black;
 }
 
 #scoreBoard{
