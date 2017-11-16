@@ -1,0 +1,78 @@
+
+body{
+  font-family: 'Roboto Condensed', Georgia,Times New Roman,serif;
+  background-image: url("/images/woodPattern.jpg");
+  background-size: cover;
+}
+
+.container{
+  overflow: auto;
+}
+
+.outerCircle { 
+  margin-top: 100px;
+  width: 550px; 
+  height: 550px; 
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%; 
+  background-color: #333333;
+  overflow: auto;
+} 
+
+.topLeftCircle{
+  margin-top: 50px;
+  height: 225px;
+  width: 225px;
+  border-top-left-radius: 400px;
+  background-color: red;
+  display: inline-block;
+  border: 10px solid #333333;
+}
+
+.topRightCircle{
+  margin-top: 50px;
+  height: 225px;
+  width: 225px;
+  border-top-right-radius: 400px;
+  background-color: blue;
+  display: inline-block;
+  border: 10px solid #333333;
+}
+
+.botLeftCircle{
+  margin-top: 0px;
+  height: 225px;
+  width: 225px;
+  border-bottom-left-radius: 400px;
+  background-color: green;
+  display: inline-block;
+  border: 10px solid #333333;
+}
+
+.botRightCircle{
+  margin-top: 0px;
+  height: 225px;
+  width: 225px;
+  border-bottom-right-radius: 400px;
+  background-color: black;
+  display: inline-block;
+  border: 10px solid #333333;
+}
+
+.innerCircle{
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 250px;
+  background-color: white;
+  bottom: 400px;
+  border: 20px solid #333333;
+}
+
+.startBut{
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background-color: black;
+}
