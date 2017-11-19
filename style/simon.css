@@ -13,28 +13,28 @@ body{
   margin-top: 100px;
   width: 550px; 
   height: 550px; 
-  -moz-border-radius: 50%; 
-  -webkit-border-radius: 50%; 
-  border-radius: 50%; 
+  -moz-border-radius: 100%; 
+  -webkit-border-radius: 100%; 
+  border-radius: 100%; 
   background-color: #333333;
   overflow: auto;
 } 
 
 .topLeftCircle{
-  margin-top: 50px;
-  height: 225px;
-  width: 225px;
-  border-top-left-radius: 400px;
+  margin-top: 10px;
+  height: 265px;
+  width: 265px;
+  border-top-left-radius: 450px;
   background-color: red;
   display: inline-block;
   border: 10px solid #333333;
 }
 
 .topRightCircle{
-  margin-top: 50px;
-  height: 225px;
-  width: 225px;
-  border-top-right-radius: 400px;
+  margin-top: 10px;
+  height: 265px;
+  width: 265px;
+  border-top-right-radius: 450px;
   background-color: blue;
   display: inline-block;
   border: 10px solid #333333;
@@ -42,9 +42,9 @@ body{
 
 .botLeftCircle{
   margin-top: 0px;
-  height: 225px;
-  width: 225px;
-  border-bottom-left-radius: 400px;
+  height: 265px;
+  width: 265px;
+  border-bottom-left-radius: 450px;
   background-color: green;
   display: inline-block;
   border: 10px solid #333333;
@@ -52,9 +52,9 @@ body{
 
 .botRightCircle{
   margin-top: 0px;
-  height: 225px;
-  width: 225px;
-  border-bottom-right-radius: 400px;
+  height: 265px;
+  width: 265px;
+  border-bottom-right-radius: 450px;
   background-color: black;
   display: inline-block;
   border: 10px solid #333333;
@@ -62,17 +62,140 @@ body{
 
 .innerCircle{
   position: relative;
-  height: 250px;
-  width: 250px;
-  border-radius: 250px;
+  height: 300px;
+  width: 300px;
+  border-radius: 300px;
   background-color: white;
-  bottom: 400px;
+  bottom: 425px;
   border: 20px solid #333333;
 }
 
-.startBut{
-  height: 10px;
-  width: 10px;
+.panelTop{
+  margin-top: 20px;
+}
+
+.scoreDisplay{
+  height: 40px;
+  width: 60px;
   border-radius: 10px;
+  background-color: #4c0405;
+  border: 3px solid #333333;
+}
+
+.startBut{
+  margin-top: 9px;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background-color: red;
+  border: 3px solid #333333;
+}
+
+.strictBut{
+  margin-top: 3px;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background-color: green;
+  border: 3px solid #333333;
+}
+
+.strictIndicate{
+  margin-left: 10px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
   background-color: black;
+}
+
+#switchBoard{
+  margin-top:10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+#label1{
+  margin-right: 40px;
+  margin-left: -20px;
+  display: inline-block;
+  text-align: left;
+
+}
+
+#label2{
+  margin-right: 20px;
+  display: inline-block;
+}
+
+#label3{
+  padding-right: : 10px;
+  display: inline-block;
+}
+
+.switch,.switchOff,.switchOn{
+  display: inline-block;
+}
+
+.switchOff,.switchOn{
+  position: absolute;
+}
+
+.score{
+  font-family: 'Orbitron',sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: -12px;
+  color: #a51818;
+}
+
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+#labelMain{
+  font-family: Impact;
+  font-weight: bold;
+  font-size: 70px;
 }
