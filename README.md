@@ -6,7 +6,7 @@ The projects are namely:
 
 -Build a Pomodoro Clock : COMPLETE
 
--Build a Tic Tac Toe Game
+-Build a Tic Tac Toe Game : COMPLETE
 
 -Build a Simon Game
 
