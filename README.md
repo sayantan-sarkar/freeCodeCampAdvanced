@@ -1,3 +1,7 @@
+THIS PROJECT IS SUCCESSFULLY COMPLETED.
+
+
+~~~~~~~~~~~~~
 This is a repository to try out the advanced front-end development tutorial projects on freeCodeCamp.
 
 The projects are namely:
@@ -8,7 +12,7 @@ The projects are namely:
 
 -Build a Tic Tac Toe Game : COMPLETE
 
--Build a Simon Game
+-Build a Simon Game : COMPLETE
 
 You can find more details about freeCodeCamp at https://www.freecodecamp.org/
 

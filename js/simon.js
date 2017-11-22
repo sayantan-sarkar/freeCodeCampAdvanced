@@ -9,6 +9,12 @@ var switchOn = false;
 var strictMode = false;
 var round =  0;
 var userArray = [];
+var globalFreeze = false;
+var winRound = 5;
+var clickAudio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
+var errorAudio = new Audio('../sounds/error.mp3');
+var successAudio = new Audio('../sounds/successTada.mp3');
+
 
 $(document).ready(function() {
 	
@@ -23,26 +29,29 @@ $(document).ready(function() {
 			round = 0;
 			blinkArray = [];
 			strictMode = false;
+			$('.strictIndicate').css('background-color','black');
 			userArray = [];
 			$('.score').html('00');
 			$('.score').css('color','#ff0000');
 		}else{
 			$('.score').html('88');
 			$('.score').css('color','#a51818');
+			$('.strictIndicate').css('background-color','black');
 		}
 		
 	});
 
 	$('.startBut').click(function(){
-		if(switchOn){
-			round = 1;
-			$('.score').html(('0'+round).slice(-2));
-			blinkLights(round);
+		if(!switchOn || globalFreeze){
+			return true;
 		}
+		round = 1;
+		$('.score').html(('0'+round).slice(-2));
+		blinkLights(round);
 	});
 
 	$('.strictBut').click(function(){
-		if(!switchOn){
+		if(!switchOn || globalFreeze){
 			return true;
 		}
 		if(strictMode){
@@ -57,7 +66,7 @@ $(document).ready(function() {
 	var cba = function(){ return callbackAction();};
 
 	$('.topLeftCircle').click(function(){
-		if(!switchOn){
+		if(!switchOn || globalFreeze){
 			return true;
 		}
 		tempArr = [];
@@ -65,13 +74,14 @@ $(document).ready(function() {
 		tempArr.push(userArray[userArray.length-1]);
 		globalCounter = 0;
 		globalReset = false;
+		globalFreeze = true;
 		globalTimer  = setInterval(function(){ changeBackgroundColor(tempArr, cba);},500);
 		
 		return true;
  	});
 
  	$('.topRightCircle').click(function(){
- 		if(!switchOn){
+ 		if(!switchOn || globalFreeze){
 			return true;
 		}
  		tempArr = [];
@@ -79,12 +89,13 @@ $(document).ready(function() {
 		tempArr.push(userArray[userArray.length-1]);
 		globalCounter = 0;
 		globalReset = false;
+		globalFreeze = true;
 		globalTimer  = setInterval(function(){ changeBackgroundColor(tempArr, cba);},500);
 		
 		return true;
  	});
  	$('.botLeftCircle').click(function(){
- 		if(!switchOn){
+ 		if(!switchOn || globalFreeze){
 			return true;
 		}
  		tempArr = [];
@@ -92,12 +103,13 @@ $(document).ready(function() {
 		tempArr.push(userArray[userArray.length-1]);
 		globalCounter = 0;
 		globalReset = false;
+		globalFreeze = true;
 		globalTimer  = setInterval(function(){ changeBackgroundColor(tempArr, cba);},500);
 	
 		return true;
  	});
  	$('.botRightCircle').click(function(){
- 		if(!switchOn){
+ 		if(!switchOn || globalFreeze){
 			return true;
 		}
  		tempArr = [];
@@ -105,6 +117,7 @@ $(document).ready(function() {
 		tempArr.push(userArray[userArray.length-1]);
 		globalCounter = 0;
 		globalReset = false;
+		globalFreeze = true;
 		globalTimer  = setInterval(function(){ changeBackgroundColor(tempArr, cba);},500);
 		
 		return true;
@@ -113,13 +126,17 @@ $(document).ready(function() {
 
 function callbackAction(){
 	gameState = checkCorrectness(userArray, blinkArray);
-	console.log(userArray);
 	if(gameState == 2){
 		round = round + 1;
+		if(round == winRound){
+			round = 1;
+			successAudio.play();
+		}
 		$('.score').html(('0'+round).slice(-2));
 		userArray = [];
 		blinkLights(round);
 	}else if(gameState == 0){
+		errorAudio.play();
 		if(strictMode){
 			round = 1;
 		}
@@ -184,10 +201,12 @@ function changeBackgroundColor(arr, callback){
 		globalReset = true;
 		globalColor = $('.'+className).css('background-color');
 		$('.'+className).css('background-color','white');
+		clickAudio.play();
 	}
 
 	if(globalCounter == arr.length){
 		clearInterval(globalTimer);
+		globalFreeze = false;
 		callback();
 	}
 }
@@ -206,6 +225,7 @@ function blinkLights(round){
 
 	globalCounter = 0;
 	globalReset = false;
+	globalFreeze = true;
 	globalTimer  = setInterval(function(){ changeBackgroundColor(outArr, callback);},500);
 
 	return true;
